@@ -8,11 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display a Navbar Title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('client app is running!');
+    expect(page.getTitleNav()).toEqual('My Store');
   });
-
+  it('should display a list of pokemon', () => {
+    page.navigateTo();
+    expect(page.getProductElements().count()).toBe(10);
+  });
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);

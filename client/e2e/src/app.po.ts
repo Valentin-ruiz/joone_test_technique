@@ -2,10 +2,13 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
   navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+    return browser.get('/home');
   }
 
-  getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  getTitleNav() {
+    return element(by.css('app-root .mat-toolbar h1')).getText() as Promise<string>;
+  }
+  getProductElements() {
+    return element.all(by.css('.mat-card'));
   }
 }

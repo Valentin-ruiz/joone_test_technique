@@ -11,10 +11,9 @@ export class HomeComponent implements OnInit {
   products = [];
   constructor(private apiService: ApiService) { }
   ngOnInit() {
-    this.apiService.get().subscribe((data: any[])=>{  
-      console.log(data);  
-      this.products = data;  
-    })  
+    this.apiService.get().subscribe((data: any[])=>{
+      this.products = data;
+    })
   }
 
 }
