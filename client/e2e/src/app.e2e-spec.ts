@@ -12,7 +12,7 @@ describe('workspace-project App', () => {
     page.navigateTo();
     expect(page.getTitleNav()).toEqual('My Store');
   });
-  it('should display a list of pokemon', () => {
+  it('should display a list of products', () => {
     page.navigateTo();
     expect(page.getProductElements().count()).toBe(10);
   });
