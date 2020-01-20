@@ -6,3 +6,6 @@ Il s'agit d'un test techinque permettant d'afficher 10 produits via une api
 * Angular
 * Rspec
 * e2e test
+
+
+- Modifier le fichier /api/config/app_environment_variables_example et le rename app_environment_variables
